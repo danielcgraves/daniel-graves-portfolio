@@ -119,13 +119,29 @@ main {
     width: 100%;
     border-spacing: 0;
     transition: 0.3s;
-    border: 4px solid grey;
+    outline: 4px solid grey;
 }
 
 .work-grid img:hover {
     filter: brightness(125%);
 }
 
+
+.overlay {
+    position: absolute;
+    margin-top: -3.5rem;
+    background: grey;
+    color: var(--aliceblue);
+    width: 15%;
+    color: var(--aliceblue);
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .overlay p{
+    font-size: 0.5rem;
+}
 /* Media Queries */
 
 @media (min-width: 769px){
