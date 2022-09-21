@@ -1,44 +1,124 @@
 
+/* Universal Styles */
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-
+    font-family: sans-serif;
 }
+
 
 :root {
     --aliceblue: aliceblue;
-    --lighter-shade-black: rgba(0, 0, 0, 0.753);
+    --lighter-shade-black: rgba(0, 0, 0, 0.815);
+    --skyblue: skyblue;
 }
 
-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2%;
-    background-color: var(--lighter-shade-black);
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-header h1 {
-    white-space: nowrap;
+a:hover,
+nav li:hover {
+    color: var(--skyblue);
+}
+
+body {
+    background-color: var(--aliceblue);
+}
+
+h1 {
+    margin: 0;
     padding: 0 50%;
     background-color: var(--aliceblue);
 }
+
+h2 {
+    border-bottom: 1px solid var(--lighter-shade-black);
+    margin: 2% 50%;
+}
+
+h1,
+h2 {
+    white-space: nowrap;
+    color: var(--lighter-shade-black);
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Header Styles */
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    padding: .5rem 0;
+    background-color: var(--lighter-shade-black);
+}
+
+/* Nav Styles */
+
 
 nav ul {
     display: flex;
     white-space: nowrap;
     margin-top: 2%;
     justify-content: center;
+    gap: 1rem;
 }
 
 nav li{
-    margin: 0 2%;
+    padding: 0 1rem;
+    margin: 0 -1px;
     color: var(--aliceblue);
-    list-style-type: none;
+    border-bottom: 3px solid var(--aliceblue);
 }
 
-body {
-    background-color: var(--aliceblue);
+
+nav li:hover {
+    border-color: var(--skyblue);
 }
+
+
+/* Main Photo Styles */
+
+.bryce-photo {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Main Styles*/
+
+main {
+    padding-top: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 3%;
+}
+
+
+
+/* ID's */
+
+#about-me {
+
+}
+
+#work {
+
+}
+
+#contact-me {
+
+}
+
