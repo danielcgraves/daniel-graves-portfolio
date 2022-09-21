@@ -106,19 +106,34 @@ main {
     padding: 0 3%;
 }
 
+/* Work Section */
 
-
-/* ID's */
-
-#about-me {
-
+.work-grid {
+  display: grid;
+  gap: 1rem;
 }
 
-#work {
-
+.work-grid img {
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+    border-spacing: 0;
+    transition: 0.3s;
+    border: 4px solid grey;
 }
 
-#contact-me {
-
+.work-grid img:hover {
+    filter: brightness(125%);
 }
 
+/* Media Queries */
+
+@media (min-width: 769px){
+    .work-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-span-2 {
+        grid-column: span 2;
+    }
+}
