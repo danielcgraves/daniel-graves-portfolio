@@ -1,5 +1,5 @@
 
-/* Universal Styles */
+/*----- Universal Styles ------*/
 
 *{
     box-sizing: border-box;
@@ -50,7 +50,7 @@ li {
     list-style-type: none;
 }
 
-/* Header Styles */
+/*----- Header Styles -----*/
 
 .header {
     display: flex;
@@ -61,14 +61,13 @@ li {
     background-color: var(--lighter-shade-black);
 }
 
-/* Nav Styles */
+/*----- Nav Styles ------*/
 
 
 nav ul {
     display: flex;
     white-space: nowrap;
     margin-top: 2%;
-    justify-content: center;
     gap: 1rem;
 }
 
@@ -85,7 +84,7 @@ nav li:hover {
 }
 
 
-/* Main Photo Styles */
+/*----- Main Photo Styles -----*/
 
 .bryce-photo {
     display: block;
@@ -93,7 +92,11 @@ nav li:hover {
     width: 100%;
 }
 
-/* Main Styles*/
+.blue-stripes {
+    display: none;
+}
+
+/*----- Main Styles -----*/
 
 main {
     padding-top: 1rem;
@@ -103,10 +106,16 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 3%;
+    padding: 3%;
 }
 
-/* Work Section */
+/*----- About Me ----- */
+
+.about-me-p {
+    padding: 1rem;
+}
+
+/*----- Work Section -----*/
 
 .work-grid {
   display: grid;
@@ -133,7 +142,6 @@ main {
     background: grey;
     color: var(--aliceblue);
     width: 15%;
-    color: var(--aliceblue);
     font-size: 1rem;
     padding: 10px;
     text-align: center;
@@ -142,9 +150,39 @@ main {
   .overlay p{
     font-size: 0.5rem;
 }
-/* Media Queries */
+
+/*----- Contact Me Section -----*/
+
+.contact-me ul {
+    padding: 1rem 0;
+}
+
+.contact-me li {
+    padding-top: 0.25rem;
+}
+
+/*----- Media Queries -----*/
 
 @media (min-width: 769px){
+
+    .photo-flex {
+        display: flex;
+    }
+
+    .bryce-photo {
+        max-width: 325px;
+    }
+    
+    .blue-stripes {
+        display: inline;
+        width: 100%;
+    }
+    
+    .bryce-photo,
+    .blue-stripes {
+        height: 400px;
+    }
+
     .work-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -152,4 +190,73 @@ main {
     .grid-span-2 {
         grid-column: span 2;
     }
+
+    .contact-me li {
+        font-weight: bold;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+
+@media (min-width: 901px) {
+    
+    
+.header {
+    flex-wrap: nowrap;
+    background-color: var(--lighter-shade-black);
+    justify-content: space-between;
+}
+
+h1 {
+    padding: 0 1rem 0 4rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+nav ul {
+    padding-right: 3rem;
+    white-space: nowrap;
+    margin-top: 2%;
+    gap: 1rem;
+}
+
+.card {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3%;
+}
+
+.card p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+h2 {
+    border-bottom: none;
+    align-self: flex-start;
+    border-right: 3px solid var(--lighter-shade-black);
+    margin: 2% 10% 2% 5%;
+    padding-right: 1rem;
+}
+
+.about-me-p{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.contact-me ul {
+    white-space: nowrap;
+    position: absolute;
+    padding-left: 30%;
+}
+.contact-me li {
+    display: inline;
+    font-weight: bolder;
+    font-size: large;
+    padding: 0 7%;
+    }
+
 }
